@@ -21,44 +21,85 @@
     <!--Шапка сайту-->
     <header class="header">
       <div class="header__nav container">
-        <nav class="main-nav">
-          <a href="./index.html" class="header__logo">
-            <span class="header__web">Web</span>Studio</a
+        <a href="./index.html" class="header__logo">
+          <span class="header__web">Web</span>Studio</a
+        >
+
+        <button
+          class="button-menu is-open"
+          type="button"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="40px"
+            height="40px"
+            aria-label="Перемикач мобільного меню"
           >
-          <ul class="site-nav">
-            <li class="site-nav__item">
-              <a
-                href="./index.html"
-                class="header__link header__link--active link"
-                >Студія</a
-              >
+            <use
+              class="button-menu__hamburger"
+              href="./images/symbol-defs.svg#menu"
+            ></use>
+            <use
+              class="button-menu__cros"
+              href="./images/symbol-defs.svg#close-menu"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="menu__container" id="menu-container" data-menu>
+          <nav class="main-nav">
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a
+                  href="./index.html"
+                  class="header__link header__link--active link"
+                  >Студія</a
+                >
+              </li>
+              <li class="site-nav__item">
+                <a href="./portfolio.html" class="link">Портфоліо</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="./" class="link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="header-contacts">
+            <li class="header-contacts__item">
+              <a href="mailto:" class="link header-contacts__link">
+                <svg class="contact-icon" width="16px" height="12px">
+                  <use href="./images/symbol-defs.svg#icon-mail"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
-            <li class="site-nav__item">
-              <a href="./portfolio.html" class="link">Портфоліо</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="./" class="link">Контакти</a>
+            <li class="header-contacts__item">
+              <a href="tel:" class="header-contacts__link link">
+                <svg class="contact-icon" width="10px" height="16px">
+                  <use href="./images/symbol-defs.svg#icon-phone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="header-contacts">
-          <li class="header-contacts__item">
-            <a href="mailto:" class="link header-contacts__link">
-              <svg class="contact-icon" width="16px" height="12px">
-                <use href="./images/symbol-defs.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="header-contacts__item">
-            <a href="tel:" class="header-contacts__link link">
-              <svg class="contact-icon" width="10px" height="16px">
-                <use href="./images/symbol-defs.svg#icon-phone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+
+          <ul class="header-networks">
+            <li>
+              <a class="header-networks__link" href="#" lang="en">Instagram</a>
+            </li>
+            <li>
+              <a class="header-networks__link" href="#" lang="en">Twitter</a>
+            </li>
+            <li>
+              <a class="header-networks__link" href="#" lang="en">Facebook</a>
+            </li>
+            <li>
+              <a class="header-networks__link" href="#" lang="en">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -72,10 +113,10 @@
         </div>
       </section>
       <!--Переваги-->
-      <section class="section">
+      <section class="benefits section">
         <div class="container">
           <h2 hidden>Наші переваги</h2>
-          <ul class="benefits">
+          <ul class="benefits__list">
             <li class="benefits__item">
               <div class="benefits__icons">
                 <svg width="70px" height="70px">
@@ -132,15 +173,51 @@
           <h2 class="activities__title">Чим ми займаємося</h2>
           <ul class="activities__list">
             <li class="activities__item">
-              <img src="./images/box1.jpg" alt="Людина тицяє по клавіатурі" />
+              <picture>
+                <img
+                  src="./images/activities-section/activities-section-desktop-dev@1x.jpg"
+                  alt="Людина тицяє по клавіатурі"
+                />
+                <source
+                  srcset="
+                    ./images/activities-section/activities-section-desktop-dev@1x.jpg 1x,
+                    ./images/activities-section/activities-section-desktop-dev@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+              </picture>
               <p class="activities__subtitle">Десктопні додатки</p>
             </li>
             <li class="activities__item">
-              <img src="./images/box2.jpg" alt="Людина тицяє в телефоні" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/activities-section/activities-section-desktop-apps@1x.jpg 1x,
+                    ./images/activities-section/activities-section-desktop-apps@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/activities-section/activities-section-desktop-apps@1x.jpg"
+                  alt="Людина тицяє в телефоні"
+                />
+              </picture>
               <p class="activities__subtitle">Мобільні додатки</p>
             </li>
             <li class="activities__item">
-              <img src="./images/box3.jpg" alt="Людина тицяє в планшеті" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/activities-section/activities-section-desktop-design@1x.jpg 1x,
+                    ./images/activities-section/activities-section-desktop-design@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/activities-section/activities-section-desktop-design@1x.jpg"
+                  alt="Людина тицяє в планшеті"
+                />
+              </picture>
               <p class="activities__subtitle">Дизайнерські рішення</p>
             </li>
           </ul>
@@ -152,7 +229,33 @@
           <h2 class="our-team__title">Наша команда</h2>
           <ul class="our-team__list">
             <li class="our-team__item">
-              <img src="./images/demianenko.jpg" alt="Ігор" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our-team-section/mobile/demianenko-mobile@1x.jpg 1x,
+                    ./images/our-team-section/mobile/demianenko-mobile@1x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-section/tablet/demianenko-tablet@1x.jpg 1x,
+                    ./images/our-team-section/tablet/demianenko-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-section/desktop/demianenko-desktop@1x.jpg 1x,
+                    ./images/our-team-section/desktop/demianenko-desktop@1x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/our-team-section/desktop/demianenko-desktop@1x.jpg"
+                  alt="Ігор"
+                />
+              </picture>
               <div class="our-team__container">
                 <h3 class="our-team__name">Ігор Дем'яненко</h3>
                 <p lang="en" class="our-team__profession">Product Designer</p>
@@ -195,7 +298,33 @@
               </div>
             </li>
             <li class="our-team__item">
-              <img src="./images/repina.jpg" alt="Ольга" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our-team-section/mobile/repina-mobile@1x.jpg 1x,
+                    ./images/our-team-section/mobile/repina-mobile@1x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-section/tablet/repina-tablet@1x.jpg 1x,
+                    ./images/our-team-section/tablet/repina-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-section/desktop/repina-desktop@1x.jpg 1x,
+                    ./images/our-team-section/desktop/repina-desktop@1x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/our-team-section/desktop/repina-desktop@1x.jpg"
+                  alt="Ольга"
+                />
+              </picture>
               <div class="our-team__container">
                 <h3 class="our-team__name">Ольга Рєпіна</h3>
                 <p lang="en" class="our-team__profession">Frontend Developer</p>
@@ -238,7 +367,33 @@
               </div>
             </li>
             <li class="our-team__item">
-              <img src="./images/tarasov.jpg" alt="Микола" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our-team-section/mobile/tarasov-mobile@1x.jpg 1x,
+                    ./images/our-team-section/mobile/tarasov-mobile@1x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-section/tablet/tarasov-tablet@1x.jpg 1x,
+                    ./images/our-team-section/tablet/tarasov-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-section/desktop/tarasov-desktop@1x.jpg 1x,
+                    ./images/our-team-section/desktop/tarasov-desktop@1x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/our-team-section/desktop/tarasov-desktop@1x.jpg"
+                  alt="Микола"
+                />
+              </picture>
               <div class="our-team__container">
                 <h3 class="our-team__name">Микола Тарасов</h3>
                 <p lang="en" class="our-team__profession">Marketing</p>
@@ -281,7 +436,33 @@
               </div>
             </li>
             <li class="our-team__item">
-              <img src="./images/ermakov.jpg" alt="Михайло" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our-team-section/mobile/ermakov-mobile@1x.jpg 1x,
+                    ./images/our-team-section/mobile/ermakov-mobile@1x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-section/tablet/ermakov-tablet@1x.jpg 1x,
+                    ./images/our-team-section/tablet/ermakov-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-section/desktop/ermakov-desktop@1x.jpg 1x,
+                    ./images/our-team-section/desktop/ermakov-desktop@1x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/our-team-section/desktop/ermakov-desktop@1x.jpg"
+                  alt="Михайло"
+                />
+              </picture>
               <div class="our-team__container">
                 <h3 class="our-team__name">Михайло Єрмаков</h3>
                 <p lang="en" class="our-team__profession">UI Designer</p>

@@ -1,0 +1,87 @@
+.button-menu {
+display: inline-flex;
+position: absolute;
+top: 10px;
+right: 15px;
+
+padding: 0;
+margin: 0;
+border: none;
+color: none;
+background-color: transparent;
+z-index: 2;
+
+@media screen and (min-width: 768px) {
+display: none;
+}
+}
+
+.button-menu__cros {
+fill: var(--color-primary);
+cursor: pointer;
+
+&:hover,
+&:focus {
+fill: var(--color-logo-accent);
+}
+}
+
+.button-menu__hamburger {
+cursor: pointer;
+}
+
+.button-menu .button-menu__cros {
+display: block;
+}
+
+.button-menu.is-open .button-menu__cros {
+display: none;
+}
+
+.button-menu .button-menu__hamburger {
+display: none;
+}
+
+.button-menu.is-open .button-menu__hamburger {
+display: block;
+}
+
+.menu__container {
+
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+
+z-index: 1;
+background-color: var(--color-background-1);
+padding: 48px 40px;
+
+@media screen and (max-width: 767px) {
+opacity: 0;
+pointer-events: none;
+visibility: hidden;
+
+display: block;
+transform: scaleX(0);
+transform-origin: top right;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+&.is-open {
+pointer-events: auto;
+opacity: 1;
+visibility: visible;
+transform: scaleX(1);
+}
+
+@media screen and (min-width: 768px) {
+position: relative;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0;
+}
+}
