@@ -51,20 +51,49 @@ margin-top: 9px;
 }
 
 .footer-container {
-display: -webkit-box;
-display: -ms-flexbox;
+@media screen and (max-width:1199px) {
+text-align: center;
+}
+
+@media screen and (min-width:768px) {
 display: flex;
--webkit-box-align: baseline;
--ms-flex-align: baseline;
-align-items: baseline;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+justify-content: space-between;
+}
+}
+
+.footer-adress__container {
+@media screen and (max-width: 767px) {
+margin: 0 auto;
+margin-bottom: 60px;
+}
+
+@media screen and (min-width:768px) {
+margin-bottom: 65PX;
+margin-right: 165px;
+}
+
+@media screen and (min-width:1200px) {
+margin-right: 70px;
+margin-bottom: 0;
+}
 }
 
 .join {
--webkit-box-align: baseline;
--ms-flex-align: baseline;
-align-items: baseline;
-margin-left: 70px;
+width: 206px;
+
+@media screen and (max-width: 767px) {
+margin: 0 auto 60px;
+}
+
+@media screen and (min-width:1200px) {
+padding-top: 12px;
 margin-right: 93px;
+}
 }
 
 .join__title {
@@ -129,10 +158,26 @@ background-color: var(--color-logo-accent);
 fill: currentColor;
 }
 
+.follow {
+@media screen and (max-width: 767px) {
+margin-left: auto;
+margin-right: auto;
+}
+
+@media screen and (min-width:768px) {
+width: 450px;
+}
+
+@media screen and (min-width: 1200px) {
+width: 570px;
+padding-top: 12px;
+}
+}
+
 .follow__form {
-display: -webkit-box;
-display: -ms-flexbox;
+@media screen and (min-width:1200px) {
 display: flex;
+}
 }
 
 .follow__title {
@@ -146,23 +191,31 @@ margin-bottom: 20px;
 }
 
 .follow__field {
-width: 358px;
-height: 50px;
+margin-bottom: 30px;
+width: 100%;
+font-size: 16px;
+line-height: 1.25;
+color: rgba(255, 255, 255, 0.6);
+background-color: var(--color-background-2);
+padding: 15px 16px;
+outline: none;
+
 border: 1px solid rgba(255, 255, 255, 0.3);
--webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 border-radius: 4px;
-background-color: var(--color-background-2);
+
+    
+@media screen and (min-width:768px) {
+margin-bottom: 20px;
+}
+
+@media screen and (min-width:1200px) {
+margin-bottom: 0;
 margin-right: 12px;
-padding-left: 16px;
-letter-spacing: 0.03em;
-color: rgba(255, 255, 255, 0.6);
-outline: none;
+}
 }
 
 .follow-btn {
-display: -webkit-box;
-display: -ms-flexbox;
 display: flex;
 width: 200px;
 height: 50px;
@@ -171,26 +224,20 @@ font-size: 16px;
 line-height: 1.875;
 color: var(--color-background-1);
 background-color: var(--color-logo-accent);
--webkit-box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 border-radius: 4px;
 cursor: pointer;
--webkit-box-pack: center;
--ms-flex-pack: center;
 justify-content: center;
--webkit-box-align: center;
--ms-flex-align: center;
 align-items: center;
 border: none;
--webkit-transition-property: background-color;
--o-transition-property: background-color;
 transition-property: background-color;
--webkit-transition-duration: 250ms;
--o-transition-duration: 250ms;
 transition-duration: 250ms;
--webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
--o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+@media screen and (max-width: 1199px) {
+margin-left: auto;
+margin-right: auto;
+}
 }
 
 .follow-btn__text {
@@ -198,11 +245,7 @@ margin-right: 10px;
 }
 
 .follow-btn__icon {
--webkit-box-pack: center;
--ms-flex-pack: center;
 justify-content: center;
--webkit-box-align: center;
--ms-flex-align: center;
 align-items: center;
 fill: var(--color-background-1);
 }
