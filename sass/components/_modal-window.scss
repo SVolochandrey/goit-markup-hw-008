@@ -25,20 +25,23 @@ pointer-events: none;
 }
 
 .modal {
+background: var(--color-background-1);
 position: absolute;
+width: 450px;
+height: 609px;
 top: 50%;
 left: 50%;
 padding: 40px;
-text-align: center; 
--webkit-transform: translate(-50%, -50%) scale(1); 
--ms-transform: translate(-50%, -50%) scale(1); 
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 4px;
 transform: translate(-50%, -50%) scale(1);
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+@media screen and (min-width:1200px) {
 width: 528px;
 height: 581px;
-background: var(--color-background-1);
--webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 4px;
+}
 }
 
 .modal-title {
@@ -63,7 +66,7 @@ display: block;
 text-align: start;
 margin-left: auto;
 margin-right: auto;
-width: 448px;
+width: 100%;
 font-size: 12px;
 line-height: 1.166;
 letter-spacing: 0.01em;
@@ -177,23 +180,28 @@ background-color: var(--color-logo-accent);
 }
 
 .accept-text {
-display: block;
 padding-right: 5px;
-font-size: 14px;
-line-height: 1.71;
+font-size: 12px;
+line-height: 1.17;
 letter-spacing: 0.03em;
 color: var(--color-text);
+
+@media screen and (min-width: 1200px) {
+font-size: 14px;
+line-height: 1.71;
+}
 }
 
 .form-checkbox-link {
--webkit-box-align: center;
--ms-flex-align: center;
-align-items: center;
-font-weight: 400;
-font-size: 14px;
-line-height: 1.714;
+font-size: 12px;
+line-height: 1.17;
 letter-spacing: 0.03em;
 color: var(--color-logo-accent);
+
+@media screen and (min-width: 1200px) {
+font-size: 14px;
+line-height: 1.71;
+}
 }
 
 .send-btn {
@@ -201,7 +209,6 @@ width: 200px;
 height: 50px;
 background-color: var(--color-logo-accent);
 color: var(--color-background-1);
--webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
 margin-top: 30px;
@@ -209,20 +216,12 @@ font-weight: 700;
 font-size: 16px;
 line-height: 1.875;
 letter-spacing: 0.06em;
--webkit-box-align: center;
--ms-flex-align: center;
 align-items: center;
 text-align: center;
 cursor: pointer;
 border: none;
--webkit-transition-property: background-color;
--o-transition-property: background-color;
 transition-property: background-color;
--webkit-transition-duration: 250ms;
--o-transition-duration: 250ms;
 transition-duration: 250ms;
--webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
--o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 

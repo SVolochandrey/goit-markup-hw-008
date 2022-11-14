@@ -812,17 +812,23 @@ ul {
 }
 
 .modal {
+  background: var(--color-background-1);
   position: absolute;
+  width: 450px;
+  height: 609px;
   top: 50%;
   left: 50%;
   padding: 40px;
-  text-align: center;
-  transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  height: 581px;
-  background: var(--color-background-1);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-title {
@@ -847,7 +853,7 @@ ul {
   text-align: start;
   margin-left: auto;
   margin-right: auto;
-  width: 448px;
+  width: 100%;
   font-size: 12px;
   line-height: 1.166;
   letter-spacing: 0.01em;
@@ -933,21 +939,30 @@ ul {
 }
 
 .accept-text {
-  display: block;
   padding-right: 5px;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--color-text);
 }
+@media screen and (min-width: 1200px) {
+  .accept-text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
 
 .form-checkbox-link {
-  align-items: center;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--color-logo-accent);
+}
+@media screen and (min-width: 1200px) {
+  .form-checkbox-link {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .send-btn {
