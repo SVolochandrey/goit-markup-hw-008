@@ -1,0 +1,107 @@
+.our-team {
+background-color: var(--color-background-4);
+}
+
+.our-team__title {
+font-family: 'Roboto','sans-serif';
+font-weight: 700;
+font-size: 36px;
+line-height: 1.17;
+color: var(--color-primary);
+text-align: center;
+margin-bottom: 50px; 
+}
+
+.our-team__list {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+}
+
+.our-team__item {
+background-color: var(--color-background-1);
+width: 270px;
+margin-right: 30px;
+text-align: center;
+-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
+}
+
+.team-cards:last-child {
+margin-right: 0;
+}
+
+.our-team__name {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.17;
+color: var(--color-primary);
+margin-bottom: 10px;
+}
+
+.our-team__profession {
+font-weight: 400;
+font-size: 16px;
+line-height: 1.17;
+color: var(--color-text);
+margin-bottom: 16px;
+}
+
+.our-team__container {
+padding-top: 30px;
+padding-bottom: 30px;
+}
+
+.our-team__socials {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
+}
+
+.our-team__soclinks {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+width: 44px;
+height: 44px;
+border: 0;
+border-radius: 50%;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+color: var(--color-border-links);
+-webkit-transition-property: color, background-color;
+-o-transition-property: color, background-color;
+transition-property: color, background-color;
+-webkit-transition-duration: 250ms;
+-o-transition-duration: 250ms;
+transition-duration: 250ms;
+-webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+-o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.our-team__socitems {
+margin-right: 10px;
+}
+
+.our-team__socitems:last-child {
+margin-right: 0;
+}
+
+.our-team__soclinks:hover,
+.our-team__soclinks:focus {
+color: var(--color-background-1);
+background-color: var(--color-logo-accent);
+}
+
+.our-team__icons {
+fill: currentColor;
+}

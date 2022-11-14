@@ -1,0 +1,54 @@
+.hero-title {
+background-color: var(--color-background-2);
+padding-bottom: 200px;
+padding-top: 200px;
+text-align: center;
+}
+
+.hero-background {
+max-width: 1600px;
+height: 600px;
+margin-left: auto;
+margin-right: auto;
+background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)),
+to(rgba(47, 48, 58, 0.4))),
+url(../images/hero-background-image\ \(1\).jpg);
+background-image: -o-linear-gradient(left, rgba(47, 48, 58, 0.4),
+rgba(47, 48, 58, 0.4)),
+url(../images/hero-background-image\ \(1\).jpg);
+background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4),
+rgba(47, 48, 58, 0.4)),
+url(../images/hero-background-image\ \(1\).jpg);
+}
+
+.title-decisions {
+color: var(--color-background-1);
+font-weight: 900;
+font-size: 44px;
+line-height: 1.363;
+letter-spacing: 0.06em;
+width: 696px;
+height: 120px;
+text-transform: uppercase;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 30px;
+}
+
+.button-order {
+background-color: var(--color-logo-accent);
+color: var(--color-background-1);
+font-weight: 700;
+font-size: 16px;
+line-height: 1.875;
+width: 216px;
+height: 50px;
+border-radius: 4px;
+letter-spacing: 0.06em;
+cursor: pointer;
+border: none;
+}
+
+.button-order:hover {
+background-color: var(--color-dark-blue);
+}
