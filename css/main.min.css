@@ -692,20 +692,13 @@ ul {
   color: var(--color-text);
   letter-spacing: 0.02em;
   font-weight: 500;
-  font-size: 34px;
+  font-size: 24px;
   line-height: 1.18;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
 }
 .header-contacts__link:hover, .header-contacts__link:focus {
   color: var(--color-logo-accent);
-}
-@media screen and (min-width: 0) and (max-width: 767px) {
-  .contacts__item:first-child .header-contacts__link {
-    font-size: 24px;
-    line-height: 1.17;
-    color: var(--color-logo-accent);
-  }
 }
 @media screen and (min-width: 768px) {
   .header-contacts__link {
@@ -720,6 +713,14 @@ ul {
     align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .header-contacts__link--number {
+    font-size: 34px;
+    line-height: 1.17;
+    color: var(--color-logo-accent);
   }
 }
 
