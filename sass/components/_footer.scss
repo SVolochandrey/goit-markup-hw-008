@@ -233,6 +233,7 @@ border: none;
 transition-property: background-color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+padding: 10px 28px;
 
 @media screen and (max-width: 1199px) {
 margin-left: auto;
