@@ -1,12 +1,24 @@
 .categories {
-display: -webkit-box;
-display: -ms-flexbox;
 display: flex;
-margin-bottom: 50px;
-gap: 8px;
--webkit-box-pack: center;
--ms-flex-pack: center;
+flex-wrap: wrap;
+margin-bottom: 40px;
+
+@media screen and (min-width:768px) {
 justify-content: center;
+margin-bottom: 50px;
+}
+}
+
+.categories__item {
+&:not(:last-child) {
+margin-right: 8px;
+}
+
+@media screen and (max-width:767px) {
+&:nth-child(1) {
+margin-bottom: 15px;
+}
+}
 }
 
 .categories__btn {
@@ -22,17 +34,14 @@ letter-spacing: 0.03em;
 border: none;
 display: inline-block;
 padding: 6px 22px;
--webkit-transition-property: background-color, color, -webkit-box-shadow;
 transition-property: background-color, color, -webkit-box-shadow;
--o-transition-property: background-color, color, box-shadow;
 transition-property: background-color, color, box-shadow;
-transition-property: background-color, color, box-shadow, -webkit-box-shadow;
--webkit-transition-duration: 250ms;
--o-transition-duration: 250ms;
 transition-duration: 250ms;
--webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
--o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.categories__btn:first-child {
+padding: 6px 25px;
 }
 
 .categories__btn:hover,

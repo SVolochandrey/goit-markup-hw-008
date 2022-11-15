@@ -21,44 +21,93 @@
     <!--Шапка сайту-->
     <header class="header">
       <div class="header__nav container">
-        <nav class="main-nav">
-          <a href="./index.html" class="header__logo">
-            <span class="header__web">Web</span>Studio</a
+        <a href="./index.html" class="header__logo">
+          <span class="header__web">Web</span>Studio</a
+        >
+
+        <button
+          class="button-menu is-open"
+          type="button"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="40px"
+            height="40px"
+            aria-label="Перемикач мобільного меню"
           >
-          <ul class="site-nav">
-            <li class="site-nav__item">
-              <a href="./index.html" class="link">Студія</a>
+            <use
+              class="button-menu__hamburger"
+              href="./images/symbol-defs.svg#menu"
+            ></use>
+            <use
+              class="button-menu__cros"
+              href="./images/symbol-defs.svg#close-menu"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="menu__container" id="menu-container" data-menu>
+          <nav class="main-nav">
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a href="./index.html" class="header__link link">Студія</a>
+              </li>
+              <li class="site-nav__item">
+                <a
+                  href="./portfolio.html"
+                  class="header__link header__link--active link"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="site-nav__item">
+                <a href="./" class="header__link link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="header-contacts">
+            <li class="header-contacts__item">
+              <a href="mailto:" class="link header-contacts__link">
+                <svg class="contact-icon" width="16px" height="12px">
+                  <use href="./images/symbol-defs.svg#icon-mail"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
-            <li class="site-nav__item">
-              <a
-                href="./portfolio.html"
-                class="header__link header__link--active link"
-                >Портфоліо</a
-              >
-            </li>
-            <li class="site-nav__item">
-              <a href="./" class="link">Контакти</a>
+            <li class="header-contacts__item">
+              <a href="tel:" class="header-contacts__link link">
+                <svg class="contact-icon" width="10px" height="16px">
+                  <use href="./images/symbol-defs.svg#icon-phone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="header-contacts">
-          <li class="header-contacts__item">
-            <a href="mailto:" class="link header-contacts__link">
-              <svg class="contact-icon" width="16px" height="12px">
-                <use href="./images/symbol-defs.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="header-contacts__item">
-            <a href="tel:" class="header-contacts__link link">
-              <svg class="contact-icon" width="10px" height="16px">
-                <use href="./images/symbol-defs.svg#icon-phone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+
+          <ul class="header-networks">
+            <li>
+              <a class="header-networks__link link" href="#" lang="en"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a class="header-networks__link link" href="#" lang="en"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a class="header-networks__link link" href="#" lang="en"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a class="header-networks__link link" href="#" lang="en"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -67,19 +116,19 @@
         <div class="container">
           <h1 hidden>Заголовок</h1>
           <ul class="categories">
-            <li>
+            <li class="categories__item">
               <button class="categories__btn" type="button">Усі</button>
             </li>
-            <li>
+            <li class="categories__item">
               <button class="categories__btn" type="button">Веб-сайти</button>
             </li>
-            <li>
+            <li class="categories__item">
               <button class="categories__btn" type="button">Додатки</button>
             </li>
-            <li>
+            <li class="categories__item">
               <button class="categories__btn" type="button">Дизайн</button>
             </li>
-            <li>
+            <li class="categories__item">
               <button class="categories__btn" type="button">Маркетинг</button>
             </li>
           </ul>
@@ -291,7 +340,7 @@
     </main>
     <footer class="footer">
       <div class="footer-container container">
-        <div>
+        <div class="footer-adress__container">
           <a href="./index.html" class="footer__logo">
             <span class="footer__web">Web</span
             ><span class="footer__studio">Studio</span></a
@@ -370,5 +419,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
