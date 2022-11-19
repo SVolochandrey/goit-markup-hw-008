@@ -811,7 +811,7 @@ ul {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  width: 216px;
+  width: 200px;
   height: 50px;
   border-radius: 4px;
   letter-spacing: 0.06em;
@@ -820,6 +820,11 @@ ul {
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .button-order {
+    width: 216px;
+  }
 }
 
 .button-order:hover {
